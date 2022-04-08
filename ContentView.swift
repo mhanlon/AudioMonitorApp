@@ -15,6 +15,10 @@ struct ContentView: View {
             MeterView(volume: volume, stepByValue: 0.1)
             MeterView(volume: volume)
                 .padding()
+            ProgressView("Meter", value: volume)
+                .progressViewStyle(.linear)
+                .tint(.green)
+                .padding()
             Text("Let's hear you clap!")
             HStack {
                 if !self.isMonitoring {
